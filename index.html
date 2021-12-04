@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- This example requires Tailwind CSS v2.0+ -->
@@ -84,9 +86,22 @@
       </div>
     </div>
   </nav>
+
+   <form class="form">
+        <label for='area'>Area Name</label>
+        <input  id='area-name' name='area'></input>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="area-list">
+    </div>
+
+    <div id = "show" class="display">
+    </div>
+        
   
     <!-- <footer>
         <img src="https://www.zoopla.co.uk/static/images/mashery/powered-by-zoopla-150x73.png" width="150" height="73" title="Property information powered by Zoopla" alt="Property information powered by Zoopla" border="0">
     </footer> -->
+    <script src='./script.js' defer></script>
 </body>
 </html>
