@@ -1,0 +1,8 @@
+.image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.body-bg {
+      background-color: #2145e8;
+      background-image: linear-gradient(146deg, #1e1eaf 0%, #0c498f 68%);
+    }
