@@ -138,7 +138,7 @@ function imageclick(e) {
 
   var localStorageKey = "details";
   localStorage.setItem(localStorageKey, listingDetail);
-  window.location.href = "./display.html";
+  window.location.href = "./crime.html";
   /*if (e.target && e.target.matches("div.image")) {
     console.log(e);
   }*/
