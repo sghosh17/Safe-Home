@@ -24,7 +24,7 @@ const settings = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "zoopla.p.rapidapi.com",
-    "x-rapidapi-key": "36e9ca705dmsh4bc5c207898513cp1709dbjsnfa9c6b49aa5b",
+    "x-rapidapi-key": "wIC46v1Nt2pHzmlVUR69A0nElhQvBL0u",
   },
 };
 
@@ -68,7 +68,7 @@ function handlechange(e) {
       method: "GET",
       headers: {
         "x-rapidapi-host": "zoopla.p.rapidapi.com",
-        "x-rapidapi-key": "36e9ca705dmsh4bc5c207898513cp1709dbjsnfa9c6b49aa5b",
+        "x-rapidapi-key": "wIC46v1Nt2pHzmlVUR69A0nElhQvBL0u",
       },
     };
 
