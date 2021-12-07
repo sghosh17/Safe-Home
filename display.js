@@ -14,3 +14,8 @@ if (localData) {
 var imageEl = document.createElement("img");
 imageEl.src = parsedLocalData.image_url;
 displayEl.appendChild(imageEl);
+
+var detailurlEl = document.createElement("a");
+detailurlEl.href = parsedLocalData.details_url;
+detailurlEl.innerHTML = "Zoopla Link";
+displayEl.appendChild(detailurlEl);
