@@ -1,14 +1,14 @@
-const citymap = {
-	london1: {
-		center: { lat: 51.5072, lng: 0.1276 },
-		population: 271,
-	},
+//const citymap = {
+//	london1: {
+//		center: { lat: 51.5072, lng: 0.1276 },
+//		population: 271,
+//	},
 
-	london2: {
-		center: { lat: 55.5072, lng: 0.1276 },
-		population: 250,
-	},
-};
+//	london2: {
+//		center: { lat: 55.5072, lng: 0.1276 },
+//		population: 250,
+//	},
+//};
 
 function initMap() {
 
@@ -19,7 +19,7 @@ function initMap() {
 	});
 
 
-	for (const city in citymap) {
+	for (const city in parsedLocalData.longEl, parsedLocalData.longitude) {
 
 		const cityCircle = new google.maps.Circle({
 			strokeColor: "#FF0000",
