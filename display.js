@@ -21,17 +21,16 @@ titleEl.innerText = parsedLocalData.title;
 displayEl.appendChild(titleEl);
 displayEl.appendChild(document.createElement("br"));
 
-var addressEl = document.createElement("p");
-addressEl.innerText = parsedLocalData.displayable_address;
-displayEl.appendChild(addressEl);
-displayEl.appendChild(document.createElement("br"));
-
-var descripttionEl = document.createElement("p");
-descripttionEl.innerText = parsedLocalData.short_description;
-displayEl.appendChild(descripttionEl);
-displayEl.appendChild(document.createElement("br"));
-
 var detailurlEl = document.createElement("a");
 detailurlEl.href = parsedLocalData.details_url;
 detailurlEl.innerHTML = "Zoopla Link";
 displayEl.appendChild(detailurlEl);
+
+var addressEl = document.querySelector("#pAddress");
+addressEl.innerText = parsedLocalData.displayable_address;
+
+var descripttionEl = document.querySelector("#pInfo");
+descripttionEl.innerText = parsedLocalData.short_description;
+
+
+
