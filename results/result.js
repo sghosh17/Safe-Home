@@ -24,7 +24,7 @@ const settings = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "zoopla.p.rapidapi.com",
-    "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
+    "x-rapidapi-key": "9d214b4e90msh63673fe80f82e5dp10e4b6jsn8abb4c3e71ac",
   },
 };
 
@@ -71,14 +71,14 @@ function handlechange(e) {
       method: "GET",
       headers: {
         "x-rapidapi-host": "zoopla.p.rapidapi.com",
-        "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
+        "x-rapidapi-key": "9d214b4e90msh63673fe80f82e5dp10e4b6jsn8abb4c3e71ac",
       },
     };
 
     $.ajax(settings).done(function (response) {
       console.log(response);
       var listing = response.listing;
-        //console.log(response.listing[0].listing_id);
+      //console.log(response.listing[0].listing_id);
       listing.forEach(show);
     });
 
@@ -99,7 +99,7 @@ function handlechange(e) {
       var imageEl = document.createElement("img");
       imageEl.setAttribute("class", "object-fill h-48 w-full");
       imageEl.src = imageurl;
-      
+
       var addressEl = document.createElement("p");
       addressEl.innerText = address;
 
@@ -116,7 +116,6 @@ function handlechange(e) {
       seeMoreEl.addEventListener("click", imageclick);
 
       divEl.appendChild(imageEl);
-     
 
       divEl.appendChild(addressEl);
       //divEl.appendChild(description);
