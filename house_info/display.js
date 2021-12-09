@@ -16,6 +16,11 @@ imageEl.src = parsedLocalData.image_url;
 displayEl.appendChild(imageEl);
 displayEl.appendChild(document.createElement("br"));
 
+var longEl = document.createElement("p");
+longEl.innerText = parsedLocalData.longitude;
+displayEl.appendChild(longEl);
+displayEl.appendChild(document.createElement("br"));
+
 var titleEl = document.createElement("p");
 titleEl.innerText = parsedLocalData.title;
 displayEl.appendChild(titleEl);
@@ -31,6 +36,3 @@ addressEl.innerText = parsedLocalData.displayable_address;
 
 var descripttionEl = document.querySelector("#pInfo");
 descripttionEl.innerText = parsedLocalData.short_description;
-
-
-
