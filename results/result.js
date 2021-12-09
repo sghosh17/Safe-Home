@@ -24,7 +24,7 @@ const settings = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "zoopla.p.rapidapi.com",
-    "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
+    "x-rapidapi-key": "29a6d39627mshe225ebfa3444c45p12807djsn0046fe5cd7a",
   },
 };
 
@@ -71,7 +71,7 @@ function handlechange(e) {
       method: "GET",
       headers: {
         "x-rapidapi-host": "zoopla.p.rapidapi.com",
-        "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
+        "x-rapidapi-key": "29a6d39627mshe225ebfa3444c45p12807djsn0046fe5cd7a",
       },
     };
 
@@ -92,7 +92,7 @@ function handlechange(e) {
       divEl.setAttribute("class", "image");
       divEl.setAttribute(
         "class",
-        "display h-72 w-72 bg-white my-2 justify-center shadow-md p-2 ml-auto mr-auto rounded-lg border-black border-solid border overflow-hidden "
+        "display h-72 w-72 bg-white my-2 ml-2 justify-center shadow-md p-2 rounded-lg border border-yellow-400 overflow-hidden "
       );
       divEl.setAttribute("data-item", JSON.stringify(item));
 
