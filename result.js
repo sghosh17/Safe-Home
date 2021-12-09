@@ -24,7 +24,7 @@ const settings = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "zoopla.p.rapidapi.com",
-    "x-rapidapi-key": "wIC46v1Nt2pHzmlVUR69A0nElhQvBL0u",
+    "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
   },
 };
 
@@ -42,7 +42,10 @@ $.ajax(settings).done(function (response) {
 function renderarea(item) {
   console.log(item.value);
   var optionEl = document.createElement("li");
-  optionEl.setAttribute("class", "subarea");
+  optionEl.setAttribute(
+    "class",
+    "subarea cursor-pointer  mx-4 my-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 "
+  );
   optionEl.innerHTML = item.value;
   selectEl.appendChild(optionEl);
 }
@@ -68,35 +71,35 @@ function handlechange(e) {
       method: "GET",
       headers: {
         "x-rapidapi-host": "zoopla.p.rapidapi.com",
-        "x-rapidapi-key": "wIC46v1Nt2pHzmlVUR69A0nElhQvBL0u",
+        "x-rapidapi-key": "16903a0482mshb82070e93f9abf2p1511d2jsn1995940753db",
       },
     };
 
     $.ajax(settings).done(function (response) {
       console.log(response);
       var listing = response.listing;
-      //console.log(response.listing[0].listing_id);
+        //console.log(response.listing[0].listing_id);
       listing.forEach(show);
     });
 
     function show(item) {
       var imageurl = item.image_url;
-      var caption = item.image_caption;
       var address = item.displayable_address;
       var description = item.description;
       var detailurl = item.details_url;
 
       var divEl = document.createElement("div");
       divEl.setAttribute("class", "image");
+      divEl.setAttribute(
+        "class",
+        "display h-72 w-72 bg-white my-2 justify-center shadow-md p-2 ml-auto mr-auto rounded-lg border-black border-solid border overflow-hidden "
+      );
       divEl.setAttribute("data-item", JSON.stringify(item));
 
       var imageEl = document.createElement("img");
+      imageEl.setAttribute("class", "object-fill h-48 w-full");
       imageEl.src = imageurl;
-      imageEl.style.width = "400px";
-
-      var captionEl = document.createElement("p");
-      captionEl.innerText = caption;
-
+      
       var addressEl = document.createElement("p");
       addressEl.innerText = address;
 
@@ -113,7 +116,7 @@ function handlechange(e) {
       seeMoreEl.addEventListener("click", imageclick);
 
       divEl.appendChild(imageEl);
-      divEl.appendChild(captionEl);
+     
 
       divEl.appendChild(addressEl);
       //divEl.appendChild(description);
