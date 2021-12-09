@@ -10,9 +10,6 @@
 //		population: 250,
 //	},
 //};
-var localData = localStorage.getItem(localStorageKey);
-var parsedLocalData;
-
 var displayEl = document.querySelector(".display");
 
 var localStorageKey = "details";
@@ -20,12 +17,11 @@ var localData = localStorage.getItem(localStorageKey);
 var parsedLocalData;
 
 if (localData) {
-	parsedLocalData = JSON.parse(localData);
-	console.log(parsedLocalData);
+  parsedLocalData = JSON.parse(localData);
+  console.log(parsedLocalData);
 } else {
-	console.error("could not find location");
+  console.error("could not find location");
 }
-
 
 var longEl = document.createElement("p");
 longEl.innerText = parsedLocalData.longitude;
@@ -39,7 +35,7 @@ displayEl.appendChild(document.createElement("br"));
 
 //function initMap()
 
-console.log(parsedLocalData.longitude)
+console.log(parsedLocalData.longitude);
 
 //	const map = new google.maps.Map(document.getElementById("map"), {
 //		zoom: 6,

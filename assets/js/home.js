@@ -4,7 +4,7 @@ formEl.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  remo;
+  //remo;
 
   var area = document.querySelector("#area-name").value;
 
