@@ -74,14 +74,17 @@ function handlechange(e) {
         "x-rapidapi-key": "29a6d39627mshe225ebfa3444c45p12807djsn0046fe5cd7a",
       },
     };
-
-    $.ajax(settings).done(function (response) {
+$.ajax(settings).done(function (response) {
       console.log(response);
       var listing = response.listing;
-        //console.log(response.listing[0].listing_id);
-      listing.forEach(show);
+      if (listing.length > 0) {
+        listing.forEach(show);
+      } else {
+        alert("No properties found !");
+        return;
+      }
     });
-
+    
     function show(item) {
       var imageurl = item.image_url;
       var address = item.displayable_address;
