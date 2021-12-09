@@ -39,6 +39,6 @@ function handleSubmit(event) {
     // set localStorage
     localStorage.setItem(localStorageKey, areaJSONStr);
 
-    window.location.href = "./result.html";
+    window.location.href = "../results/result.html";
   }
 }
