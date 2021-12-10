@@ -26,40 +26,43 @@
   <div class="flex flex-wrap justify-center">
     <div class="w-auto sm:w-auto">
       <img src="../assets/Img/Police-Department.png" alt="police station"
-        class="max-w-full h-auto align-middle border-none my-0" />
+        class="max-w-full h-72 align-middle border-none my-0" />
     </div>
   </div>
   <h3 id="pAddress" class="max-w-xl mx-auto font-bold text-2xl text-yellow-400 text-center border border-yellow-400">
     Address PlaceHolder</h3>
   <main class="flex flex-wrap justify-center -mx-2 overflow-hidden md:-mx-3 lg:-mx-3 ">
     <article
-      class="mt-4 max-w-lg my-2 px-2 w-full overflow-hidden md:p-10 md:my-3 md:px-3 md:w-1/2 lg:my-3 lg:px-8 border border-yellow-400 bg-blue-200 my-6 rounded-lg m-1 self-auto p-8 ">
+      class="mt-4 max-w-lg my-2 px-2 w-full overflow-hidden md:p-10 md:my-3 md:px-3 md:w-1/2 lg:my-3 lg:px-8 border border-yellow-400 bg-blue-200 rounded-lg m-1 self-auto p-8 ">
 
       <section>
         <div class="flex flex-col ">
           <div id="show"
-            class="bg-white border border-yellow-400  shadow display overflow-hidden h-auto w-auto mb-6 rounded">
+            class="relative bg-blue-200 border border-yellow-400 shadow display h-auto w-auto rounded">
           </div>
         </div>
       </section>
-
+<section class="flex flex-col w-full mt-4">
+    
+          <div id="map" class="border border-yellow-400 h-52 pt-3 rounded bg-white"></div>
+    
+  </section>
 
     </article>
 
     <article
-      class="max-w-lg my-2 px-2 w-full overflow-hidden md:p-10 md:my-3 md:px-3 md:w-1/2 lg:my-3 lg:px-8 border border-yellow-400 bg-blue-200 my-6 rounded-lg m-1 self-auto p-8 ">
+      class="max-w-lg m-4 my-2 px-2 overflow-hidden md:p-10 md:my-3 md:px-3 md:w-1/2 lg:my-3 lg:px-8 border border-yellow-400 bg-blue-200 rounded-lg m-1 self-auto p-8 ">
       <section class="bg-white shadow-md p-2 rounded-lg border border-yellow-400  overflow-hidden ">
         <h3 class=" font-bold text-2xl text-gray-800">Property Description </h3>
+        <p id="pTitle" class=" font-bold font-lg text-gray-800">Property Description </p>
         <p id="pInfo" class="display text-justify text-gray-600 pt-4">Description Placeholder</p>
       </section>
+      
+      
    </article>
   </main>
 
-  <section class="mt-2 flex flex-col mx-6">
-    <div class="w-full justify-center border border-yellow-400 bg-blue-200 rounded-lg p-8 my-2 px-2">
-          <div id="map" class="border border-yellow-400 mx-6 h-96 pt-3 rounded bg-white"></div>
-        </div>
-  </section>
+  
 
   <script src='./display.js'></script>
   <script
