@@ -10,30 +10,21 @@ if (localData) {
 } else {
   console.error("could not find cities in localStorage");
 }
-
 var imageEl = document.createElement("img");
 imageEl.src = parsedLocalData.image_url;
 displayEl.appendChild(imageEl);
-displayEl.appendChild(document.createElement("br"));
-
-var longEl = document.createElement("p");
-longEl.innerText = parsedLocalData.longitude;
-displayEl.appendChild(longEl);
-displayEl.appendChild(document.createElement("br"));
-
-var titleEl = document.createElement("p");
-titleEl.innerText = parsedLocalData.title;
-displayEl.appendChild(titleEl);
-displayEl.appendChild(document.createElement("br"));
 
 var detailurlEl = document.createElement("a");
 detailurlEl.setAttribute(
   "class",
-  "w-32 my-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+  "absolute left-2 bottom-2 text-sm w-28 text-center bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
 );
 detailurlEl.href = parsedLocalData.details_url;
 detailurlEl.innerHTML = "Zoopla Link";
 displayEl.appendChild(detailurlEl);
+
+var titleEl = document.querySelector("#pTitle");
+titleEl.innerText = parsedLocalData.title;
 
 var addressEl = document.querySelector("#pAddress");
 addressEl.innerText = parsedLocalData.displayable_address;

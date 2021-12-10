@@ -133,3 +133,4 @@ function imageclick(e) {
   localStorage.setItem(localStorageKey, listingDetail);
   window.location.href = "../house_info/crime.html";
 }
+
