@@ -78,8 +78,12 @@ function handlechange(e) {
     $.ajax(settings).done(function (response) {
       console.log(response);
       var listing = response.listing;
-      //console.log(response.listing[0].listing_id);
-      listing.forEach(show);
+      if (listing.length > 0) {
+        listing.forEach(show);
+      } else {
+        console.log("No properties found !");
+        return;
+      }
     });
 
     function show(item) {
@@ -146,3 +150,4 @@ function imageclick(e) {
     console.log(e);
   }*/
 }
+
