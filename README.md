@@ -21,16 +21,10 @@ The application has a distinct use case, but appeals to many different types of 
 
 3. After browsing the available houses in the location, the user selects a house that they like. are taken to a page that displays pictures of the property and a description. There is also a direct link to zoopla 
 
-![User Story 1](assets\Img\userstoryhouses.JPG)
-
-
-
 4. To find out about the levels of crime within the local area, the user navigates to the crime page, which has an image of a map that is highlighted with the major crime spots. The areas with the most crime presence are highlighted by a larger red circle than those with less crime. 
 
 5. If the user is happy with both the location of the house and the levels of crime in the area they can proceed to enquire about the property on Zoopla. The Safe Home application has successfully aided the house buying process.
 
-
-![User Story 2](assets\Img\userstorycrime.JPG)
 
 
 ## Technology used
