@@ -5,6 +5,7 @@ var localStorageKey = "areas";
 var localData = localStorage.getItem(localStorageKey);
 var parsedLocalData;
 
+// Fetch area name from local storage and calling Zoopla API to get suggested locations
 if (localData) {
   parsedLocalData = JSON.parse(localData);
   console.log(parsedLocalData);
@@ -39,6 +40,7 @@ $.ajax(settings).done(function (response) {
   selectEl.addEventListener("click", handlechange);
 });
 
+// Function to render the suugested locations
 function renderarea(item) {
   console.log(item.value);
   var optionEl = document.createElement("li");
@@ -50,8 +52,8 @@ function renderarea(item) {
   selectEl.appendChild(optionEl);
 }
 
+// Function to call the Zoopla API on selection of a location
 function handlechange(e) {
-
   if (e.target && e.target.matches("li.subarea")) {
     console.log(e.target.innerHTML);
 
@@ -86,6 +88,7 @@ function handlechange(e) {
       }
     });
 
+    // Function to display the property listings returning from the Zoopla API call response
     function show(item) {
       var imageurl = item.image_url;
       var address = item.displayable_address;
@@ -114,19 +117,17 @@ function handlechange(e) {
 
       divEl.appendChild(imageEl);
 
-
       divEl.appendChild(addressEl);
 
       divEl.appendChild(seeMoreEl);
 
       displayEl.appendChild(divEl);
-
     }
   }
 }
 
+// Stores the selected property into local storage and calls the crime page
 function imageclick(e) {
-  //event.preventDefault();
   console.log(e);
   console.log(e.target.parentElement);
   var parentElement = e.target.parentElement;
@@ -137,4 +138,3 @@ function imageclick(e) {
   localStorage.setItem(localStorageKey, listingDetail);
   window.location.href = "../house_info/crime.html";
 }
-

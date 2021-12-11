@@ -1,5 +1,6 @@
 var displayEl = document.querySelector(".display");
 
+// Fetching the selected property object from local storage and using it to display the property details
 var localStorageKey = "details";
 var localData = localStorage.getItem(localStorageKey);
 var parsedLocalData;
@@ -22,8 +23,6 @@ detailurlEl.setAttribute(
 detailurlEl.href = parsedLocalData.details_url;
 detailurlEl.innerHTML = "Zoopla Link";
 displayEl.appendChild(detailurlEl);
-
-
 
 var titleEl = document.querySelector("#pTitle");
 titleEl.innerText = parsedLocalData.title;
@@ -81,7 +80,7 @@ const citymap = {
   },
 
   Liverpool1: {
-    center: { lat: 53.558270, lng: -3.068743 },
+    center: { lat: 53.55827, lng: -3.068743 },
     population: 250,
   },
 
@@ -105,36 +104,30 @@ const citymap = {
     population: 250,
   },
 
-
   Dot3: {
     center: { lat: 52.786115, lng: -2.886144 },
     population: 250,
   },
-
 
   Dot4: {
     center: { lat: 53.186115, lng: -1.686144 },
     population: 250,
   },
 
-
   Dot5: {
     center: { lat: 52.761511, lng: -1.267144 },
     population: 250,
   },
-
 
   Dot6: {
     center: { lat: 51.186225, lng: -2.876134 },
     population: 250,
   },
 
-
   Dot7: {
     center: { lat: 52.186, lng: -0.886 },
     population: 250,
   },
-
 
   Dot8: {
     center: { lat: 51.186115, lng: -3.886144 },
@@ -157,7 +150,7 @@ const citymap = {
   },
 
   Dot12: {
-    center: { lat: 52.456650, lng: 0.307016 },
+    center: { lat: 52.45665, lng: 0.307016 },
     population: 250,
   },
 
@@ -181,7 +174,7 @@ const citymap = {
     population: 250,
   },
   Dot17: {
-    center: { lat: 54.204918, lng: -2.601710 },
+    center: { lat: 54.204918, lng: -2.60171 },
     population: 250,
   },
 
@@ -206,17 +199,17 @@ const citymap = {
   },
 
   Dot22: {
-    center: { lat: 52.456890, lng: -2.148731 },
+    center: { lat: 52.45689, lng: -2.148731 },
     population: 250,
   },
 
   Dot23: {
-    center: { lat: 52.931450, lng: 1.301866 },
+    center: { lat: 52.93145, lng: 1.301866 },
     population: 250,
   },
 
   Dot24: {
-    center: { lat: 53.522820, lng: -1.128462 },
+    center: { lat: 53.52282, lng: -1.128462 },
     population: 250,
   },
 
@@ -234,10 +227,9 @@ const citymap = {
     center: { lat: 53.992119, lng: -1.541812 },
     population: 250,
   },
-
-
 };
 
+// Function to display the crime map using Google Map API
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
