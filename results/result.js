@@ -51,7 +51,7 @@ function renderarea(item) {
 }
 
 function handlechange(e) {
-  //event.preventDefault();
+
   if (e.target && e.target.matches("li.subarea")) {
     console.log(e.target.innerHTML);
 
@@ -107,13 +107,6 @@ function handlechange(e) {
       var addressEl = document.createElement("p");
       addressEl.innerText = address;
 
-      //var descriptionEl = document.createElement("p");
-      //descriptionEl.innerText = description;
-
-      /*var detailurlEl = document.createElement("a");
-      detailurlEl.href = detailurl;
-      detailurlEl.innerHTML = "Link to property";*/
-
       var seeMoreEl = document.createElement("p");
       seeMoreEl.innerText = "See More....";
       seeMoreEl.setAttribute("class", "seeMore");
@@ -123,14 +116,11 @@ function handlechange(e) {
 
 
       divEl.appendChild(addressEl);
-      //divEl.appendChild(description);
+
       divEl.appendChild(seeMoreEl);
 
       displayEl.appendChild(divEl);
 
-      /*displayEl.innerHTML = item.value;
-      selectEl.appendChild(optionEl);
-      selectEl.addEventListener("change", handlechange);*/
     }
   }
 }
@@ -146,8 +136,5 @@ function imageclick(e) {
   var localStorageKey = "details";
   localStorage.setItem(localStorageKey, listingDetail);
   window.location.href = "../house_info/crime.html";
-  /*if (e.target && e.target.matches("div.image")) {
-    console.log(e);
-  }*/
 }
 
